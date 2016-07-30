@@ -16,7 +16,10 @@
   "devDependencies": {
     "angular-mocks": "^1.5.8",
     "browserify": "^13.1.0",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
+    "gulp-tslint": "^6.0.2",
+    "gulp-typescript": "^2.13.6",
     "karma": "^1.1.1",
     "karma-browserify": "^5.1.0",
     "karma-coverage": "^1.1.1",

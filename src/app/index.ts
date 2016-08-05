@@ -3,5 +3,5 @@ import {helloWorldServiceFactory} from "./services/hello-world/hello-world.servi
 let appName = "my-angular-test-app";
 
 angular
-    .module(appName)
+    .module(appName, [])
     .service("HelloWorldService", helloWorldServiceFactory);

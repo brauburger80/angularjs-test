@@ -5,6 +5,7 @@ var tslint = require("gulp-tslint");
 var typescript = require("gulp-typescript");
 var tsProject = typescript.createProject("./tsconfig.json");
 var del = require("del");
+var Server = require("karma").Server;
 var paths = {
     dist: "dist/"
 };
@@ -37,6 +38,16 @@ gulp.task("compile", ["clean", "tslint"], function () {
         .js.pipe(gulp.dest("dist/lib/"));
 });
 
-gulp.task("build", ["compile"]);
+/**
+ * Runs test one and exits
+ */
+gulp.task("test", ["compile"], function (done) {
+    new Server({
+        configFile: __dirname + "/karma.conf.js",
+        singleRun: true
+    }, done).start();
+});
+
+gulp.task("build", ["test"]);
 
 gulp.task("default", ["build"]);

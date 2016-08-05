@@ -1,11 +1,12 @@
 {
-  "name": "application-name",
+  "name": "my-angular-test-app",
   "version": "0.0.1",
-  "description": "This is the descriptioni",
+  "description": "A personnal AngularJs application for testing purposes.",
   "repository": {
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/brauburger80/angularjs-test"
   },
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "postinstall": "typings install",
     "typings": "typings",
